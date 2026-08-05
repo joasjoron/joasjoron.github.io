@@ -942,14 +942,25 @@
     const fullName = (data.get('Nom') || '').trim();
     const [firstName, ...rest] = fullName.split(' ');
     const phone = (data.get('Téléphone') || '').trim();
+    // Tous les champs du formulaire sont envoyés comme attributs de contact (identify()) :
+    // contrairement aux "données d'événement" (track()), dont le schéma Brevo se fige dès le
+    // premier événement reçu et n'expose plus les nouveaux champs, les attributs de contact
+    // sont toujours disponibles dans le sélecteur de variables de l'automation.
     const attributes = {
       PRENOM: firstName || '',
-      NOM: rest.join(' ') || ''
+      NOM: rest.join(' ') || '',
+      EMAIL: email,
+      // On utilise un attribut texte libre (TELEPHONE) plutôt que le champ intégré SMS :
+      // Brevo valide strictement le format du champ SMS (format téléphonique international)
+      // et rejette toute valeur qui n'est pas un numéro valide ("invalid SMS", 400), y compris
+      // une simple valeur vide ou un numéro français au format local (ex : "0612345678").
+      // Un attribut texte classique n'a pas cette contrainte de validation.
+      TELEPHONE: phone,
+      SOCIETE: data.get('Société') || '',
+      BESOIN: data.get('Type de besoin') || '',
+      CRENEAUX: data.get('Créneaux souhaités') || '',
+      MESSAGE_RDV: data.get('Message') || ''
     };
-    // Brevo rejette une valeur vide pour l'attribut SMS ("invalid SMS", 400) :
-    // on ne l'inclut que si un téléphone a été renseigné, sinon identify() échoue
-    // et le contact n'est jamais créé (donc l'automation ne se déclenche jamais).
-    if (phone) attributes.SMS = phone;
     Brevo.push(function(){
       Brevo.identify({ identifiers: { email_id: email }, attributes: attributes });
     });
@@ -960,7 +971,7 @@
       {
         prenom: attributes.PRENOM,
         nom: attributes.NOM,
-        telephone: attributes.SMS,
+        telephone: phone,
         societe: data.get('Société') || '',
         besoin: data.get('Type de besoin') || '',
         creneaux: data.get('Créneaux souhaités') || '',
