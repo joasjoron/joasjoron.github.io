@@ -941,11 +941,15 @@
     if (!email) return;
     const fullName = (data.get('Nom') || '').trim();
     const [firstName, ...rest] = fullName.split(' ');
+    const phone = (data.get('Téléphone') || '').trim();
     const attributes = {
       PRENOM: firstName || '',
-      NOM: rest.join(' ') || '',
-      SMS: data.get('Téléphone') || ''
+      NOM: rest.join(' ') || ''
     };
+    // Brevo rejette une valeur vide pour l'attribut SMS ("invalid SMS", 400) :
+    // on ne l'inclut que si un téléphone a été renseigné, sinon identify() échoue
+    // et le contact n'est jamais créé (donc l'automation ne se déclenche jamais).
+    if (phone) attributes.SMS = phone;
     Brevo.push(function(){
       Brevo.identify({ identifiers: { email_id: email }, attributes: attributes });
     });
