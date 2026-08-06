@@ -380,6 +380,57 @@
     }
   ]);
 </script>
+
+<!-- Suivi des clics (PDF, CTA, liens externes, logos clients) : événements Brevo anonymes
+     rattachés au cookie cuid du visiteur. Ils enrichissent la fiche du contact si celui-ci
+     s'identifie plus tard via le formulaire de RDV. Aucune notification email n'est envoyée. -->
+<script>
+(function(){
+  function trackEvent(eventName, data){
+    if (typeof Brevo === 'undefined') return;
+    Brevo.push(['track', eventName, {}, data || {}]);
+  }
+  document.addEventListener('click', function(e){
+    var el = e.target;
+
+    // 1. Ouverture d'un rapport PDF (projets académiques)
+    var pdfLink = el.closest('a.acad-card[href$=".pdf"]');
+    if (pdfLink) {
+      var titre = pdfLink.querySelector('h4');
+      trackEvent('Rapport PDF consulté', {
+        titre: titre ? titre.textContent.trim() : pdfLink.href,
+        url: pdfLink.getAttribute('href')
+      });
+      return;
+    }
+
+    // 2. Clics sur les CTA de rendez-vous / devis
+    var ctaLink = el.closest('a.btn.btn-primary[href="#contact"]');
+    if (ctaLink) {
+      trackEvent('Clic CTA', { label: ctaLink.textContent.trim() });
+      return;
+    }
+
+    // 3. Clics sur liens sociaux / externes (LinkedIn, Malt, email, écoles)
+    var extLink = el.closest('a[href*="linkedin.com"], a[href*="malt.fr"], a[href^="mailto:"], a[href*="ip-paris.fr"], a[href*="sorbonne-universite.fr"]');
+    if (extLink) {
+      trackEvent('Clic lien externe', {
+        lien: extLink.textContent.trim() || extLink.getAttribute('href'),
+        url: extLink.getAttribute('href')
+      });
+      return;
+    }
+
+    // 4. Clics sur les logos clients (section "Ils m'ont fait confiance")
+    var logo = el.closest('.trust-logos img, .trust-logos .trust-text');
+    if (logo) {
+      var client = logo.tagName === 'IMG' ? (logo.getAttribute('alt') || 'logo') : logo.textContent.trim();
+      trackEvent('Clic logo client', { client: client });
+      return;
+    }
+  });
+})();
+</script>
 </head>
 <body>
 
