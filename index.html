@@ -280,6 +280,19 @@
   .mission-card .date{font-size:12px; color:var(--gray-light); margin-bottom:10px; font-weight:600;}
   .mission-card p{font-size:13.8px; color:var(--gray); margin-bottom:10px;}
 
+  /* RECOMMANDATIONS */
+  .reco-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  @media (max-width:800px){ .reco-grid{grid-template-columns:1fr;} }
+  .reco-card{border:1px solid var(--line); border-radius:var(--radius); padding:28px; box-shadow:0 6px 20px -14px rgba(13,27,35,0.16); display:flex; flex-direction:column;}
+  .reco-card.featured{grid-column:1 / -1; background:var(--grad-soft);}
+  .reco-quote{color:var(--gray); font-size:14.5px; line-height:1.7; flex-grow:1; margin-bottom:22px;}
+  .reco-quote::before{content:'\201C'; font-family:'Poppins',sans-serif; font-weight:800; color:var(--amber);}
+  .reco-quote::after{content:'\201D'; font-family:'Poppins',sans-serif; font-weight:800; color:var(--amber);}
+  .reco-person{display:flex; align-items:center; gap:12px;}
+  .reco-avatar{width:44px; height:44px; border-radius:50%; background:var(--grad-cool); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Poppins',sans-serif; font-weight:700; font-size:14px; flex-shrink:0;}
+  .reco-name{font-family:'Poppins',sans-serif; font-weight:700; font-size:14.5px;}
+  .reco-role{font-size:12.5px; color:var(--gray-light);}
+
   /* ACADEMIC PROJECTS */
   .acad-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:28px;}
   @media (max-width:800px){ .acad-grid{grid-template-columns:1fr;} }
@@ -447,6 +460,7 @@
         <li><a href="#projets-academiques">Projets académiques</a></li>
         <li><a href="#competences">Compétences</a></li>
         <li><a href="#tarification">Tarifs</a></li>
+        <li><a href="#recommandations">Avis</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-cta">
@@ -780,6 +794,52 @@
     </div>
   </section>
 
+  <!-- RECOMMANDATIONS -->
+  <section id="recommandations">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Ils me recommandent</span>
+        <h2>Ce qu'en disent mes clients et collaborateurs</h2>
+        <p>Avis authentiques laissés par des clients et collaborateurs avec qui j'ai travaillé directement, publiés sur mon profil Malt.</p>
+      </div>
+      <div class="reco-grid">
+        <div class="reco-card featured reveal">
+          <p class="reco-quote">Joas nous a accompagnés chez Cook-e pour dimensionner un système de filtration d'air adapté à nos robots culinaires, en tenant compte de nos contraintes d'hygiène, d'espace et de budget. Il a analysé nos besoins avec précision, proposé une solution technique optimisée et livré des calculs détaillés en un temps record. Son approche rigoureuse et pragmatique, s'appuyant sur la simulation numérique, a permis de valider une architecture fiable et industrialisable. Réactif et force de proposition, Joas est un partenaire efficace et fiable pour les projets techniques exigeants. Je le recommande vivement !</p>
+          <div class="reco-person">
+            <div class="reco-avatar">CG</div>
+            <div>
+              <div class="reco-name">Corentin Guilleus</div>
+              <div class="reco-role">CTO — Cook-e</div>
+            </div>
+          </div>
+        </div>
+        <div class="reco-card reveal">
+          <p class="reco-quote">Bravo à Joas pour son implication dans l'utilisation de la CFD pour des sujets d'ingénierie !</p>
+          <div class="reco-person">
+            <div class="reco-avatar">PC</div>
+            <div>
+              <div class="reco-name">Pierre Carlotti</div>
+              <div class="reco-role">Directeur scientifique — Artelia</div>
+            </div>
+          </div>
+        </div>
+        <div class="reco-card reveal">
+          <p class="reco-quote">Joas a été un excellent freelance au sein de notre équipe. Il possède un très bon relationnel, ce qui rend la collaboration particulièrement agréable. Il est à la fois très réceptif et réactif aux demandes de l'entreprise, tout en fournissant un travail de qualité. Nous le recommandons sans hésitation.</p>
+          <div class="reco-person">
+            <div class="reco-avatar">PD</div>
+            <div>
+              <div class="reco-name">Poeiti Dorado</div>
+              <div class="reco-role">Ingénieure d'études, Artelia — maître de mon stage de fin d'études</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:36px;">
+        <a href="https://www.malt.fr/profile/joasjoron" target="_blank" rel="noopener" class="btn btn-primary" data-goatcounter-click="malt-cta-recommandations">Voir mon profil Malt</a>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section id="faq">
     <div class="wrap">
@@ -845,8 +905,8 @@
         </ul>
         <div class="contact-direct">
           <a href="mailto:joasjoron@protonmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="vertical-align:-2px; margin-right:4px;"><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2z"></path><polyline points="22 6 12 13 2 6"></polyline></svg>joasjoron@protonmail.com</a>
-          <a href="https://www.linkedin.com/in/joas-joron-472969263/" target="_blank" rel="noopener">in LinkedIn</a>
-          <a href="https://www.malt.fr/profile/joasjoron" target="_blank" rel="noopener">Malt</a>
+          <a href="https://www.linkedin.com/in/joas-joron-472969263/" target="_blank" rel="noopener" data-goatcounter-click="linkedin-contact">in LinkedIn</a>
+          <a href="https://www.malt.fr/profile/joasjoron" target="_blank" rel="noopener" data-goatcounter-click="malt-contact">Malt</a>
           <span style="display:block; font-size:13.5px; color:var(--gray-light); margin-top:4px;">Paris · La Réunion</span>
         </div>
       </div>
@@ -930,8 +990,8 @@
         <h5>Contact</h5>
         <ul>
           <li><a href="mailto:joasjoron@protonmail.com">joasjoron@protonmail.com</a></li>
-          <li><a href="https://www.linkedin.com/in/joas-joron-472969263/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://www.malt.fr/profile/joasjoron" target="_blank" rel="noopener">Malt</a></li>
+          <li><a href="https://www.linkedin.com/in/joas-joron-472969263/" target="_blank" rel="noopener" data-goatcounter-click="linkedin-footer">LinkedIn</a></li>
+          <li><a href="https://www.malt.fr/profile/joasjoron" target="_blank" rel="noopener" data-goatcounter-click="malt-footer">Malt</a></li>
         </ul>
       </div>
     </div>
