@@ -291,6 +291,7 @@
   .reco-person{display:flex; align-items:center; gap:12px;}
   .reco-avatar{width:44px; height:44px; border-radius:50%; background:var(--grad-cool); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Poppins',sans-serif; font-weight:700; font-size:14px; flex-shrink:0;}
   .reco-name{font-family:'Poppins',sans-serif; font-weight:700; font-size:14.5px;}
+  .reco-name .reco-lastname{text-transform:uppercase;}
   .reco-role{font-size:12.5px; color:var(--gray-light);}
 
   /* ACADEMIC PROJECTS */
@@ -460,8 +461,8 @@
         <li><a href="#projets-academiques">Projets académiques</a></li>
         <li><a href="#competences">Compétences</a></li>
         <li><a href="#tarification">Tarifs</a></li>
-        <li><a href="#recommandations">Avis</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#recommandations">Avis</a></li>
       </ul>
       <div class="nav-cta">
         <a href="#contact" class="btn btn-primary" style="padding:11px 22px; font-size:13.5px;">Prendre rendez-vous</a>
@@ -794,103 +795,6 @@
     </div>
   </section>
 
-  <!-- RECOMMANDATIONS -->
-  <section id="recommandations">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Ils me recommandent</span>
-        <h2>Ce qu'en disent mes clients et collaborateurs</h2>
-        <p>Avis authentiques laissés par des clients et collaborateurs avec qui j'ai travaillé directement, publiés sur mon profil Malt.</p>
-      </div>
-      <div class="reco-grid">
-        <div class="reco-card featured reveal">
-          <p class="reco-quote">Joas nous a accompagnés chez Cook-e pour dimensionner un système de filtration d'air adapté à nos robots culinaires, en tenant compte de nos contraintes d'hygiène, d'espace et de budget. Il a analysé nos besoins avec précision, proposé une solution technique optimisée et livré des calculs détaillés en un temps record. Son approche rigoureuse et pragmatique, s'appuyant sur la simulation numérique, a permis de valider une architecture fiable et industrialisable. Réactif et force de proposition, Joas est un partenaire efficace et fiable pour les projets techniques exigeants. Je le recommande vivement !</p>
-          <div class="reco-person">
-            <div class="reco-avatar">CG</div>
-            <div>
-              <div class="reco-name">Corentin Guilleus</div>
-              <div class="reco-role">CTO — Cook-e</div>
-            </div>
-          </div>
-        </div>
-        <div class="reco-card reveal">
-          <p class="reco-quote">Bravo à Joas pour son implication dans l'utilisation de la CFD pour des sujets d'ingénierie !</p>
-          <div class="reco-person">
-            <div class="reco-avatar">PC</div>
-            <div>
-              <div class="reco-name">Pierre Carlotti</div>
-              <div class="reco-role">Directeur scientifique — Artelia</div>
-            </div>
-          </div>
-        </div>
-        <div class="reco-card reveal">
-          <p class="reco-quote">Joas a été un excellent freelance au sein de notre équipe. Il possède un très bon relationnel, ce qui rend la collaboration particulièrement agréable. Il est à la fois très réceptif et réactif aux demandes de l'entreprise, tout en fournissant un travail de qualité. Nous le recommandons sans hésitation.</p>
-          <div class="reco-person">
-            <div class="reco-avatar">PD</div>
-            <div>
-              <div class="reco-name">Poeiti Dorado</div>
-              <div class="reco-role">Ingénieure d'études, Artelia — maître de mon stage de fin d'études</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:36px;">
-        <a href="https://www.malt.fr/profile/joasjoron" target="_blank" rel="noopener" class="btn btn-primary" data-goatcounter-click="malt-cta-recommandations">Voir mon profil Malt</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow">Questions fréquentes</span>
-        <h2>Avant de me contacter</h2>
-        <p>Les réponses aux questions les plus courantes sur mon fonctionnement en freelance.</p>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item reveal">
-          <summary>Comment se déroule une première prise de contact ?</summary>
-          <p>Vous décrivez votre besoin via le formulaire ci-dessous. Je reviens vers vous sous 24 à 48h ouvrées pour convenir ensemble d'un créneau d'échange téléphonique ou en visio, sans engagement. C'est seulement après ce premier échange qu'un devis détaillé vous est proposé.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>Travaillez-vous à distance ou sur site ?</summary>
-          <p>Les deux : la majorité des missions (modélisation, simulation, post-traitement) se prêtent bien au travail à distance. Je peux aussi me déplacer ponctuellement pour des réunions de cadrage ou de restitution, en France comme à La Réunion.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>Pourquoi le TJM n'est-il pas affiché sur le site ?</summary>
-          <p>Chaque mission a un périmètre différent (durée, outils, urgence, accès à des licences ou du calcul HPC). Je préfère donc établir un devis détaillé et transparent après avoir compris votre besoin, plutôt qu'afficher un tarif générique qui ne reflèterait pas la réalité du projet.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>Quels types de missions acceptez-vous ?</summary>
-          <p>Études ponctuelles, missions longue durée (régie ou forfait) et interventions urgentes. Cela va de l'étude CFD complète au développement d'un script de post-traitement ou au débogage d'un code scientifique existant.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>Mes données et mon projet restent-ils confidentiels ?</summary>
-          <p>Oui. Je peux signer un accord de confidentialité (NDA) avant tout échange technique détaillé. Les études de cas présentées sur ce site ne mentionnent que des informations déjà publiques ou validées avec les clients concernés.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>Sous quel délai puis-je espérer une réponse ?</summary>
-          <p>Je réponds à toutes les demandes sous 24 à 48h ouvrées. Pour les besoins urgents (dépannage, échéance serrée), précisez-le dans le message : je priorise ces demandes.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "Comment se déroule une première prise de contact ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous décrivez votre besoin via le formulaire du site. Réponse sous 24 à 48h ouvrées pour convenir d'un créneau d'échange téléphonique ou en visio, sans engagement. Un devis détaillé est proposé après ce premier échange."}},
-      {"@type": "Question", "name": "Travaillez-vous à distance ou sur site ?", "acceptedAnswer": {"@type": "Answer", "text": "Les deux : la majorité des missions se prêtent au travail à distance, avec des déplacements ponctuels possibles en France et à La Réunion pour le cadrage ou la restitution."}},
-      {"@type": "Question", "name": "Pourquoi le TJM n'est-il pas affiché sur le site ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque mission a un périmètre différent (durée, outils, urgence, licences, calcul HPC). Un devis détaillé et transparent est établi après avoir compris le besoin plutôt qu'un tarif générique."}},
-      {"@type": "Question", "name": "Quels types de missions sont acceptées ?", "acceptedAnswer": {"@type": "Answer", "text": "Études ponctuelles, missions longue durée (régie ou forfait) et interventions urgentes, de l'étude CFD complète au développement d'outils de post-traitement."}},
-      {"@type": "Question", "name": "Les données et le projet restent-ils confidentiels ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, un accord de confidentialité (NDA) peut être signé avant tout échange technique détaillé."}},
-      {"@type": "Question", "name": "Sous quel délai la réponse arrive-t-elle ?", "acceptedAnswer": {"@type": "Answer", "text": "Sous 24 à 48h ouvrées pour toutes les demandes, avec priorité donnée aux besoins urgents signalés dans le message."}}
-    ]
-  }
-  </script>
-
   <!-- CONTACT / RDV -->
   <section id="contact">
     <div class="wrap contact-grid">
@@ -966,6 +870,103 @@
       </div>
     </div>
   </section>
+
+  <!-- RECOMMANDATIONS -->
+  <section id="recommandations">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Ils me recommandent</span>
+        <h2>Ce qu'en disent mes clients et collaborateurs</h2>
+        <p>Avis authentiques laissés par des clients et collaborateurs avec qui j'ai travaillé directement, publiés sur mon profil Malt.</p>
+      </div>
+      <div class="reco-grid">
+        <div class="reco-card featured reveal">
+          <p class="reco-quote">Joas nous a accompagnés chez Cook-e pour dimensionner un système de filtration d'air adapté à nos robots culinaires, en tenant compte de nos contraintes d'hygiène, d'espace et de budget. Il a analysé nos besoins avec précision, proposé une solution technique optimisée et livré des calculs détaillés en un temps record. Son approche rigoureuse et pragmatique, s'appuyant sur la simulation numérique, a permis de valider une architecture fiable et industrialisable. Réactif et force de proposition, Joas est un partenaire efficace et fiable pour les projets techniques exigeants. Je le recommande vivement !</p>
+          <div class="reco-person">
+            <div class="reco-avatar">QG</div>
+            <div>
+              <div class="reco-name">Quentin <span class="reco-lastname">Guilleus</span>, PhD</div>
+              <div class="reco-role">CTO — Cook-e</div>
+            </div>
+          </div>
+        </div>
+        <div class="reco-card reveal">
+          <p class="reco-quote">Bravo à Joas pour son implication dans l'utilisation de la CFD pour des sujets d'ingénierie !</p>
+          <div class="reco-person">
+            <div class="reco-avatar">PC</div>
+            <div>
+              <div class="reco-name">Pierre <span class="reco-lastname">Carlotti</span></div>
+              <div class="reco-role">Directeur scientifique — Artelia</div>
+            </div>
+          </div>
+        </div>
+        <div class="reco-card reveal">
+          <p class="reco-quote">Joas a été un excellent freelance au sein de notre équipe. Il possède un très bon relationnel, ce qui rend la collaboration particulièrement agréable. Il est à la fois très réceptif et réactif aux demandes de l'entreprise, tout en fournissant un travail de qualité. Nous le recommandons sans hésitation.</p>
+          <div class="reco-person">
+            <div class="reco-avatar">PD</div>
+            <div>
+              <div class="reco-name">Poeiti <span class="reco-lastname">Dorado</span>, PhD</div>
+              <div class="reco-role">Ingénieure d'études, Artelia — maître de mon stage de fin d'études</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:36px;">
+        <a href="https://www.malt.fr/profile/joasjoron" target="_blank" rel="noopener" data-goatcounter-click="malt-cta-recommandations" style="display:inline-flex; align-items:center; gap:6px; font-family:'Poppins',sans-serif; font-weight:600; font-size:13px; color:var(--coral); padding:8px 18px; border:1px solid var(--line); border-radius:999px;">Voir mon profil Malt →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Questions fréquentes</span>
+        <h2>Avant de me contacter</h2>
+        <p>Les réponses aux questions les plus courantes sur mon fonctionnement en freelance.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>Comment se déroule une première prise de contact ?</summary>
+          <p>Vous décrivez votre besoin via le formulaire ci-dessous. Je reviens vers vous sous 24 à 48h ouvrées pour convenir ensemble d'un créneau d'échange téléphonique ou en visio, sans engagement. C'est seulement après ce premier échange qu'un devis détaillé vous est proposé.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Travaillez-vous à distance ou sur site ?</summary>
+          <p>Les deux : la majorité des missions (modélisation, simulation, post-traitement) se prêtent bien au travail à distance. Je peux aussi me déplacer ponctuellement pour des réunions de cadrage ou de restitution, en France comme à La Réunion.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Pourquoi le TJM n'est-il pas affiché sur le site ?</summary>
+          <p>Chaque mission a un périmètre différent (durée, outils, urgence, accès à des licences ou du calcul HPC). Je préfère donc établir un devis détaillé et transparent après avoir compris votre besoin, plutôt qu'afficher un tarif générique qui ne reflèterait pas la réalité du projet.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Quels types de missions acceptez-vous ?</summary>
+          <p>Études ponctuelles, missions longue durée (régie ou forfait) et interventions urgentes. Cela va de l'étude CFD complète au développement d'un script de post-traitement ou au débogage d'un code scientifique existant.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Mes données et mon projet restent-ils confidentiels ?</summary>
+          <p>Oui. Je peux signer un accord de confidentialité (NDA) avant tout échange technique détaillé. Les études de cas présentées sur ce site ne mentionnent que des informations déjà publiques ou validées avec les clients concernés.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Sous quel délai puis-je espérer une réponse ?</summary>
+          <p>Je réponds à toutes les demandes sous 24 à 48h ouvrées. Pour les besoins urgents (dépannage, échéance serrée), précisez-le dans le message : je priorise ces demandes.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Comment se déroule une première prise de contact ?", "acceptedAnswer": {"@type": "Answer", "text": "Vous décrivez votre besoin via le formulaire du site. Réponse sous 24 à 48h ouvrées pour convenir d'un créneau d'échange téléphonique ou en visio, sans engagement. Un devis détaillé est proposé après ce premier échange."}},
+      {"@type": "Question", "name": "Travaillez-vous à distance ou sur site ?", "acceptedAnswer": {"@type": "Answer", "text": "Les deux : la majorité des missions se prêtent au travail à distance, avec des déplacements ponctuels possibles en France et à La Réunion pour le cadrage ou la restitution."}},
+      {"@type": "Question", "name": "Pourquoi le TJM n'est-il pas affiché sur le site ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque mission a un périmètre différent (durée, outils, urgence, licences, calcul HPC). Un devis détaillé et transparent est établi après avoir compris le besoin plutôt qu'un tarif générique."}},
+      {"@type": "Question", "name": "Quels types de missions sont acceptées ?", "acceptedAnswer": {"@type": "Answer", "text": "Études ponctuelles, missions longue durée (régie ou forfait) et interventions urgentes, de l'étude CFD complète au développement d'outils de post-traitement."}},
+      {"@type": "Question", "name": "Les données et le projet restent-ils confidentiels ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, un accord de confidentialité (NDA) peut être signé avant tout échange technique détaillé."}},
+      {"@type": "Question", "name": "Sous quel délai la réponse arrive-t-elle ?", "acceptedAnswer": {"@type": "Answer", "text": "Sous 24 à 48h ouvrées pour toutes les demandes, avec priorité donnée aux besoins urgents signalés dans le message."}}
+    ]
+  }
+  </script>
 
 </main>
 
