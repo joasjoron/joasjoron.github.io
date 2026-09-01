@@ -397,7 +397,7 @@
     var pdfLink = el.closest('a.acad-card[href$=".pdf"]');
     if (pdfLink) {
       var titre = pdfLink.querySelector('h4');
-      trackEvent('Rapport PDF consulté', {
+      trackEvent('Rapport PDF consulte', {
         titre: titre ? titre.textContent.trim() : pdfLink.href,
         url: pdfLink.getAttribute('href')
       });
